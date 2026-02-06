@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book a day — Illusia Adventures</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Sixtyfour&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <nav class="nav">
+    <div class="brand">
+      <a href="index.html" class="brand-link">
+        <img src="assets/logo.jpeg" alt="Illusia Adventures logo" />
+        <div class="title">Illusia Adventures</div>
+      </a>
+    </div>
+    <div class="links">
+      <a href="index.html">Home</a>
+      <a href="experiences.html">Experiences</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="booking.html" class="active cta">Book a day</a>
+    </div>
+  </nav>
+
+   <main class="container">
+    <header class="pagehead">
+      <h1>Book a day</h1>
+      <p class="lead">
+        Quick booking starts with a message. Tell me the basics and I’ll reply with a simple plan.
+      </p>
+    </header>
+
+    <section class="section note">
+      <h2>What to include</h2>
+      <ul class="bullets">
+        <li>Dates / flexible days</li>
+        <li>Number of people</li>
+        <li>Experience level</li>
+        <li>What you want to do (or how you want to feel)</li>
+      </ul>
+      <p style="margin-top:14px">
+        <a class="cta" href="contact.html">Go to contact</a>
+      </p>
+    </section>
+
+    <section class="section">
+      <h2>Send a message</h2>
+
+      <form class="form">
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" placeholder="Your name" />
+        </div>
+
+        <div class="field">
+          <label for="email">Email</label>
+          <input id="email" name="email" placeholder="you@email.com" />
+        </div>
+
+        <div class="field">
+          <label for="msg">What kind of day?</label>
+          <textarea id="msg" name="msg" placeholder="Season, number of people, experience level, and what you want to feel."></textarea>
+        </div>
+
+        <button class="cta" type="button">Send (placeholder)</button>
+      </form>
+
+      <p style="color:rgba(255,255,255,.55); margin-top:10px">
+        (This button is a visual placeholder. When you want, we can connect it to email or a booking tool.)
+      </p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    © 2026 Illusia Adventures — Surf • Splitboard • Climb
+  </footer>
+</body>
+</html>
