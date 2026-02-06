@@ -55,17 +55,61 @@
 
     <section class="section">
       <h2>Feedback</h2>
-      <blockquote>
-        <p>
-          “Calm, safe and inspiring days. You feel supported without being pushed.”
-        </p>
-        <footer>— Guest</footer>
-      </blockquote>
+
+      <div class="feedback">
+        <div class="fb-hit" id="fbPrev">‹</div>
+
+        <blockquote class="fb-card" id="fbCard">
+          <p id="fbQuote">“Calm, safe and inspiring days.”</p>
+          <footer id="fbAuthor">— Guest</footer>
+        </blockquote>
+
+        <div class="fb-hit" id="fbNext">›</div>
+      </div>
     </section>
   </main>
 
   <footer class="footer">
     © 2026 Illusia Adventures — Surf • Splitboard • Climb
   </footer>
+
+  <script>
+    (function(){
+      const items = [
+        { quote: "Calm, safe and inspiring days. You feel supported without being pushed.", author: "— Guest" },
+        { quote: "Perfect pace and clear guidance. Felt safe the whole day.", author: "— Guest" },
+        { quote: "Small group, good flow, and a surprisingly deep sense of calm.", author: "— Guest" }
+      ];
+
+      const card = document.getElementById("fbCard");
+      const quoteEl = document.getElementById("fbQuote");
+      const authorEl = document.getElementById("fbAuthor");
+      const prev = document.getElementById("fbPrev");
+      const next = document.getElementById("fbNext");
+
+      let i = 0;
+
+      function render(){
+        card.classList.add("is-fading");
+        setTimeout(() => {
+          quoteEl.textContent = "“" + items[i].quote + "”";
+          authorEl.textContent = items[i].author;
+          card.classList.remove("is-fading");
+        }, 140);
+      }
+
+      prev.addEventListener("click", () => {
+        i = (i - 1 + items.length) % items.length;
+        render();
+      });
+
+      next.addEventListener("click", () => {
+        i = (i + 1) % items.length;
+        render();
+      });
+
+      render();
+    })();
+  </script>
 </body>
 </html>
